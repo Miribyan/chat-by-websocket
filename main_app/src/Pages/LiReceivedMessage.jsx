@@ -4,10 +4,18 @@ import { format } from "date-fns";
 export default function LiReceivedMessage({ message, recipients }) {
   const navigate = useNavigate();
 
+  const findRecipientById = (id) => {
+    return recipients.find(item => item.id === id)
+  }
+
   const findName = (id) => {
-    let name = recipients.find((item) => item.id === id).name;
-    return name;
+    const recipient = findRecipientById(id)
+
+    if (recipient) {
+      return recipient.name
+    }
   };
+
   const replyToMessage = (id) => {
     navigate(`send-message/${id}`);
   };
