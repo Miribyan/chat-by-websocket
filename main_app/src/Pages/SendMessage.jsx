@@ -30,6 +30,7 @@ function SendMessage() {
     getListRec()
       .then((res) => res.json())
       .then((data) => {
+        console.log(data)
         setItemList(data);
       });
     setActiveId(window.localStorage.getItem("activeUserId"));
@@ -77,11 +78,11 @@ function SendMessage() {
 
   return (
     <div className="h-full text-sm">
-      <div className="h-2/5  mb-2 p-2 border-solid border-indigo-900 rounded-lg border-2 flex flex-col gap-1">
+      <div className="h-2/5  my-5 p-2 bg-gray-100 rounded-lg drop-shadow-lg flex flex-col gap-1">
         <div className="relative mb-3 mt-3">
           <label
             htmlFor="name"
-            className="inline-block bg-white px-1 text-xs font-medium text-gray-900"
+            className="inline-block py-2 px-1 text-xs font-medium text-gray-900"
           >
             Receiver name
           </label>
@@ -101,9 +102,9 @@ function SendMessage() {
         <div className="relative mb-3 mt-3">
           <label
             htmlFor="name"
-            className="absolute -top-2 left-2 inline-block bg-white px-1 text-xs font-medium text-gray-900"
+            className="absolute -top-2 left-2 inline-block px-1 text-xs font-medium text-gray-900"
           >
-            Letter subject
+            
           </label>
           <input
             type="text"
@@ -111,7 +112,7 @@ function SendMessage() {
             id="name"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            className="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:mx-2 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
             placeholder="Subject of mail"
           />
         </div>
@@ -119,7 +120,7 @@ function SendMessage() {
 
         <div className="flex items-start space-x-4 mt-2">
           <div className="min-w-0  flex-1 relative">
-            <div className="overflow-hidden rounded-lg shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-indigo-600">
+            <div className="overflow-hidden rounded-lg drop-shadow-md bg-gray-50 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-gray-600">
               <label htmlFor="comment" className="sr-only">
                 Add your comment
               </label>
@@ -128,7 +129,7 @@ function SendMessage() {
                 name="comment"
                 id="comment"
                 value={textarea}
-                className="block w-full h-36 resize-none border-0 bg-transparent text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:py-1.5 sm:text-sm sm:leading-6"
+                className="block w-full h-36 resize-none px-2 border-0 bg-transparent text-gray-900 placeholder:text-gray-400 placeholder:mx-2 focus:ring-0 sm:py-1.5 sm:text-sm sm:leading-6"
                 placeholder="Add your text message..."
                 onChange={(e) => setTextarea(e.target.value)}
               />
@@ -139,7 +140,7 @@ function SendMessage() {
                 <button
                   type="button"
                   onClick={onSend}
-                  className="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="inline-flex items-center rounded-md bg-gray-800 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700"
                 >
                   Send message
                 </button>

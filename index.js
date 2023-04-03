@@ -124,7 +124,10 @@ app.get("/list", async (req, res) => {
 
 app.get("*", (req, res) => {
   res.sendFile(
-    path.join(url.fileURLToPath(import.meta.url), "../client/build/index.html")
+    path.join(
+      url.fileURLToPath(import.meta.url),
+      "../main_app/build/index.html"
+    )
   );
 });
 

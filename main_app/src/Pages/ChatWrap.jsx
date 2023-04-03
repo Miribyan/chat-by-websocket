@@ -22,6 +22,7 @@ export default function ChatWrap() {
     getListRec()
       .then((res) => res.json())
       .then((data) => {
+        console.log()
         setItemList(data);
       });
   }, []);
@@ -46,7 +47,7 @@ export default function ChatWrap() {
     <>
       <div>
         <div className="fixed inset-y-0 z-50 flex w-72 flex-col">
-          <div className="flex grow flex-col gap-y-8 overflow-y-auto border-r border-gray-200 bg-white px-6 pb-4">
+          <div className="flex grow bg-gray-50 drop-shadow-md flex-col gap-y-8 overflow-y-auto border-r border-gray-200 bg-white px-6 pb-4">
             <Header />
             <nav>
               <ul className="divide-y divide-gray-200">
@@ -63,7 +64,7 @@ export default function ChatWrap() {
         </div>
 
         <div className="pl-72">
-          <main className="p-2 h-screen ">
+          <main className="p-2 h-screen w-2/3 mx-auto">
             <Outlet />
           </main>
         </div>

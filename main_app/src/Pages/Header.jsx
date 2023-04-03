@@ -19,21 +19,22 @@ export default function Header() {
     window.localStorage.setItem("activeUserId", "");
   };
   return (
-    <div className="flex h-16 flex-col gap-4 pt-4 ">
+    <div className="flex h-16 flex-col drop-shadow-md gap-4 pt-4 ">
       <div className="flex justify-between ">
-        <div className="text-xl text-indigo-800 ">Hello, {name}</div>
-        <button
+      <button
           type="button"
           onClick={logout}
-          className="rounded bg-red-600 py-1 px-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+          className="rounded mx-2 bg-gray-800 py-1 px-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700"
         >
-          Log Out
+          Back
         </button>
+
+        <div className="text-xl"> User: {name}</div>
       </div>
       <button
         type="button"
         onClick={click}
-        className="rounded  w-full bg-indigo-100 py-1 px-2 text-sm font-semibold text-indigo-600 shadow-sm hover:bg-indigo-150"
+        className="rounded  w-full bg-gray-800 py-1  text-sm font-semibold text-white shadow-sm hover:bg-gray-600"
       >
         New message
       </button>

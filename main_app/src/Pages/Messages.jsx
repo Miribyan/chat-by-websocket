@@ -2,12 +2,12 @@ import { format } from "date-fns";
 
 function Messages({ messages, currentRecipientName }) {
   return (
-    <div className="h-3/5  p-2 border-solid border-indigo-900 rounded-lg border-2  overflow-y-scroll">
+    <div className="h-2/5 my-5 p-2 bg-gray-100 rounded-lg drop-shadow-lg overflow-y-scroll">
       <ul className="divide-y divide-gray-200 ">
         {messages.map((message) => (
           <li
             key={message.id}
-            className="relative bg-white py-5 px-4 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 hover:bg-gray-50"
+            className="relative bg-gray-50 py-5 px-4 rounded-md focus-within:ring-2 focus-within:ring-inset focus-within:ring-gray-600 hover:bg-white"
           >
             <div className="flex justify-between space-x-3">
               <div className="min-w-0 flex-1">
