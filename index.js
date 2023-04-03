@@ -22,7 +22,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({ origin: "*" }));
 
-app.use(express.static("./client/build"));
+app.use(express.static("./main_app/build"));
 
 const server = http.createServer(app);
 const io = new Server(server, {
