@@ -78,13 +78,13 @@ function SendMessage() {
 
   return (
     <div className="h-full text-sm">
-      <div className="h-2/5  my-5 p-2 bg-gray-100 rounded-lg drop-shadow-lg flex flex-col gap-1">
+      <div className="  my-5 p-2 bg-gray-100 rounded-lg drop-shadow-lg flex flex-col gap-1">
         <div className="relative mb-3 mt-3">
           <label
             htmlFor="name"
             className="inline-block py-2 px-1 text-xs font-medium text-gray-900"
           >
-            Receiver name
+            Recipient name
           </label>
           <Select
             value={currentRecipientId}
