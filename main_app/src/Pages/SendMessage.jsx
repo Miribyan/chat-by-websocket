@@ -78,7 +78,7 @@ function SendMessage() {
 
   return (
     <div className="h-full text-sm">
-      <div className="  my-5 p-2 bg-gray-100 rounded-lg drop-shadow-lg flex flex-col gap-1">
+      <div className="my-5 p-2 bg-gray-100 rounded-lg drop-shadow-lg flex flex-col gap-1">
         <div className="relative mb-3 mt-3">
           <label
             htmlFor="name"
